@@ -1,0 +1,17 @@
+[
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-as -x assembler-with-cpp -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -o .pio/build/genericSTM32F411CE/FrameworkCMSIS/gcc/startup_stm32f411xe.o /home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Source/Templates/gcc/startup_stm32f411xe.S",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/template",
+        "file": "/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Source/Templates/gcc/startup_stm32f411xe.S"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/FrameworkCMSIS/system_stm32f4xx.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=50205 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -I/home/moonraccoon/.platformio/packages/framework-cmsis@2.50501.200527/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include /home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Source/Templates/system_stm32f4xx.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/template",
+        "file": "/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Source/Templates/system_stm32f4xx.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/main.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=50205 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis@2.50501.200527/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/main.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/template",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/template/src/main.c"
+    }
+]
