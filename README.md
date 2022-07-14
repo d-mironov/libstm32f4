@@ -80,5 +80,5 @@ For more examples just look into the `main.c` for now.
 
 Hit me up if you want to talk about the project or contribute.
 
-E-Mail: [mailto:moonxraccoon@proton.me](moonxraccoon@proton.me)  
+E-Mail: [moonxraccoon@proton.me](mailto:moonxraccoon@proton.me)  
 Discord: moonraccoon#1337
