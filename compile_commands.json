@@ -1,17 +1,127 @@
 [
     {
-        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-as -x assembler-with-cpp -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -o .pio/build/genericSTM32F411CE/FrameworkCMSIS/gcc/startup_stm32f411xe.o /home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Source/Templates/gcc/startup_stm32f411xe.S",
-        "directory": "/home/moonraccoon/Documents/Dev/ARM/template",
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-as -o .pio/build/genericSTM32F411CE/FrameworkCMSIS/gcc/startup_stm32f411xe.o /home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Source/Templates/gcc/startup_stm32f411xe.S",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
         "file": "/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Source/Templates/gcc/startup_stm32f411xe.S"
     },
     {
-        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/FrameworkCMSIS/system_stm32f4xx.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=50205 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -I/home/moonraccoon/.platformio/packages/framework-cmsis@2.50501.200527/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include /home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Source/Templates/system_stm32f4xx.c",
-        "directory": "/home/moonraccoon/Documents/Dev/ARM/template",
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/FrameworkCMSIS/system_stm32f4xx.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include /home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Source/Templates/system_stm32f4xx.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
         "file": "/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Source/Templates/system_stm32f4xx.c"
     },
     {
-        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/main.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=50205 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis@2.50501.200527/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/main.c",
-        "directory": "/home/moonraccoon/Documents/Dev/ARM/template",
-        "file": "/home/moonraccoon/Documents/Dev/ARM/template/src/main.c"
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/drivers/bno/bno.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/drivers/bno/bno.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/drivers/bno/bno.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/drivers/mpu6050/mpu.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/drivers/mpu6050/mpu.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/drivers/mpu6050/mpu.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/drivers/ssd1306/ssd1306.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/drivers/ssd1306/ssd1306.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/drivers/ssd1306/ssd1306.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/adc.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/adc.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/adc.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/bitutils.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/bitutils.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/bitutils.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/cosmic.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/cosmic.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/cosmic.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/delay.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/delay.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/delay.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/dma.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/dma.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/dma.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/error.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/error.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/error.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/exti.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/exti.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/exti.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/gpio.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/gpio.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/gpio.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/i2c.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/i2c.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/i2c.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/pwm.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/pwm.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/pwm.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/pwr.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/pwr.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/pwr.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/rcc.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/rcc.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/rcc.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/sdio.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/sdio.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/sdio.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/spi.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/spi.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/spi.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/stm32.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/stm32.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/stm32.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/timer.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/timer.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/timer.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/uart.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/uart.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/uart.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/usb.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/usb.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/usb.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/cosmic/src/wwdg.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/cosmic/src/wwdg.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/cosmic/src/wwdg.c"
+    },
+    {
+        "command": "/home/moonraccoon/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/genericSTM32F411CE/src/main.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -DPLATFORMIO=60002 -DSTM32F411xE -DSTM32F4xx -DF_CPU=100000000L -Iinclude -Isrc -I/home/moonraccoon/.platformio/packages/framework-cmsis/CMSIS/Include -I/home/moonraccoon/.platformio/packages/framework-cmsis-stm32f4/Include src/main.c",
+        "directory": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4",
+        "file": "/home/moonraccoon/Documents/Dev/ARM/libstm32f4/src/main.c"
     }
 ]
