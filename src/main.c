@@ -1,20 +1,20 @@
 // Copyright [2022] <Daniel Mironow>
-#include <stm32f4xx.h>
 #include <stdbool.h>
-#include "cosmic/gpio.h"
-#include "cosmic/delay.h"
-#include "cosmic/uart.h"
-#include "cosmic/i2c.h"
-#include "cosmic/timer.h"
-#include "cosmic/rcc.h"
-#include "cosmic/pwr.h"
-#include "cosmic/timer.h"
+#include <stm32f4xx.h>
+
 #include "cosmic/bitutils.h"
 #include "cosmic/cosmic.h"
+#include "cosmic/delay.h"
 #include "cosmic/drivers/bno/bno.h"
+#include "cosmic/gpio.h"
+#include "cosmic/i2c.h"
+#include "cosmic/pwr.h"
+#include "cosmic/rcc.h"
+#include "cosmic/timer.h"
+#include "cosmic/uart.h"
 
-#define DEBUG_LED   PB8
-#define TEST_LED    PA8
+#define DEBUG_LED PB8
+#define TEST_LED  PA8
 
 // peripheral structure
 bno055 bno;
@@ -23,7 +23,7 @@ usart port;
 timer tim5;
 
 // error values
-error     usart_err, err_tim, i2c_err;
+error usart_err, err_tim, i2c_err;
 error_bno bno_err;
 
 // IMU sensor data vectors
@@ -43,8 +43,6 @@ void toggle_test_led(void) {
     inc(cycle, 1);
 }
 
-
-
 /**
  * Main execution function
  */
@@ -52,14 +50,14 @@ int main(void) {
     // Set system clock to 96MHz
     rcc_system_clock_config(rcc_hse_25_mhz_to_96_mhz);
     // I2C1 init object
-    i2c1 = (i2c) {
+    i2c1 = (i2c){
         .i2c = I2C1,
         .frequency = 16,
         .mode = I2C_STD_MODE,
         .duty = 0,
     };
     // USART2 init object
-    port = (usart) {
+    port = (usart){
         .usart = USART2,
         .baud = 115200,
         .mode = USART_RX_TX_MODE,
@@ -69,9 +67,9 @@ int main(void) {
         .interrupt_driven = true,
     };
     // Timer 5 init object
-    tim5 = (timer) {
+    tim5 = (timer){
         .timer = TIM5,
-        .prescaler = (apb1_freq*2)/10000,
+        .prescaler = (apb1_freq * 2) / 10000,
         .autoreload = 10000,
         .func = toggle_test_led,
         .interrup_en = true,
@@ -88,7 +86,7 @@ int main(void) {
     i2c_init(as_ptr(i2c1));
 
     // BNO
-    bno = (bno055) {
+    bno = (bno055){
         .i2c = &i2c1,
         .mode = BNO_MODE_IMU,
     };
@@ -106,26 +104,16 @@ int main(void) {
     bno055_post_result(as_ptr(bno), post_result);
     usart_printf(port, "[BNO] Self test result:\n%s", post_result);
     // set accelerometer config
-    bno.err = bno055_set_acc_conf(
-                  as_ptr(bno),
-                  BNO_ACC_RANGE_4G,
-                  BNO_ACC_BAND_250,
-                  BNO_ACC_MODE_NORMAL);
+    bno.err = bno055_set_acc_conf(as_ptr(bno), BNO_ACC_RANGE_4G,
+                                  BNO_ACC_BAND_250, BNO_ACC_MODE_NORMAL);
 
     // set gyroscope config
-    bno.err = bno055_set_gyr_conf(
-                  as_ptr(bno),
-                  BNO_GYR_RANGE_2000_DPS,
-                  BNO_GYR_BAND_32,
-                  BNO_GYR_MODE_NORMAL);
+    bno.err = bno055_set_gyr_conf(as_ptr(bno), BNO_GYR_RANGE_2000_DPS,
+                                  BNO_GYR_BAND_32, BNO_GYR_MODE_NORMAL);
 
     // set BNO units
-    bno.err = bno055_set_unit(
-                  as_ptr(bno),
-                  BNO_TEMP_UNIT_C,
-                  BNO_GYR_UNIT_DPS,
-                  BNO_ACC_UNITSEL_M_S2,
-                  BNO_EUL_UNIT_DEG);
+    bno.err = bno055_set_unit(as_ptr(bno), BNO_TEMP_UNIT_C, BNO_GYR_UNIT_DPS,
+                              BNO_ACC_UNITSEL_M_S2, BNO_EUL_UNIT_DEG);
     if (bno.err != BNO_OK) {
         usart_printf(port, "[BNO] error: %s\n", bno055_err_str(bno.err));
     } else {
@@ -145,8 +133,8 @@ int main(void) {
     u8 bit_test = 0;
 
     // ========================| Datatype Testing |=========================
-    vec3 v1 = v3(4,2,0);
-    vec4 v5 = v4(1,2,3,4);
+    vec3 v1 = v3(4, 2, 0);
+    vec4 v5 = v4(1, 2, 3, 4);
     vec3 v3;
 
     v1 = vec_mult(v1, 3);
@@ -154,11 +142,8 @@ int main(void) {
     vec_to_str(v5, v1_str);
     usart_printf(port, "Vector test %s\n", v1_str);
     if (type(cycle) == type_u32) {
-        usart_printf(
-            port,
-            "[Test] Type test: %s, %s\n",
-            type_str(cycle),
-            type_str(bit_test));
+        usart_printf(port, "[Test] Type test: %s, %s\n", type_str(cycle),
+                     type_str(bit_test));
     }
 
     // Initialize Timer
@@ -177,7 +162,8 @@ int main(void) {
     str gyro_str = new_str(40);
     byte opr_mode, pwr_mode;
     while (1) {
-        // ============================| Read BNO sensor data |==============================
+        // ============================| Read BNO sensor data
+        // |==============================
         i2c_err = i2c_read(i2c1, BNO_ADDR, BNO_OPR_MODE, as_ptr(opr_mode));
         if (i2c_err != OK) {
             usart_printf(port, "[I2C] error: %s\n", i2c_get_err_str(i2c_err));
@@ -186,7 +172,6 @@ int main(void) {
         if (i2c_err != OK) {
             usart_printf(port, "[I2C] error: %s\n", i2c_get_err_str(i2c_err));
         }
-
         bno.err = bno055_gyro(as_ptr(bno), as_ptr(gyro));
         if (bno.err != BNO_OK) {
             usart_printf(port, "[BNO] error: %s\n", bno055_err_str(bno.err));
@@ -222,7 +207,8 @@ int main(void) {
 
         vec_to_str(gyro, gyro_str);
 
-        // ============================| Print sensor data |==============================
+        // ============================| Print sensor data
+        // |==============================
         usart_printf(
             port,
             "time: %02ldh%02dm%02ds -->  temperature: %02d*C  "
@@ -234,16 +220,9 @@ int main(void) {
             // "quaternions w: % 08.4f  x: % 08.4f  y: %08.4f  z: %08.4f => "
             "euler roll: % 08.1f  pitch: %08.1f  yaw: %08.1f\r",
             // "mag x: % 08.1f  y: %08.1f  z: %08.1f\r",
-            hour,
-            min,
-            cycle,
-            temperature,
+            hour, min, cycle, temperature,
             // opr_mode, pwr_mode, gyro.x,
-            gyro.y,
-            gyro.z,
-            acc.x,
-            acc.y,
-            acc.z,
+            gyro.y, gyro.z, acc.x, acc.y, acc.z,
             // lia.x,
             // lia.y,
             // lia.z,
@@ -254,12 +233,10 @@ int main(void) {
             // quat.x,
             // quat.y,
             // quat.z,
-            euler.x,
-            euler.y,
-            euler.z
+            euler.x, euler.y, euler.z
             // mag.x,
             // mag.y,
-            // mag.z
+            // mag.z,
         );
 
         if (cycle == 60) {
