@@ -31,7 +31,6 @@ void rcc_periphclock_enable(rcc_clock_port_t port, u32 periph_enable, u8 enable)
 }
 
 
-
 /**
  * Sets the PLL M prescaler
  */

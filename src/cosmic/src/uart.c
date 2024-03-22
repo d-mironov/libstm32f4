@@ -1,3 +1,12 @@
+/**
+ * @author Daniel Mironov
+ * 
+ * TODO:
+ * - [ ] Remove `usart_printf` and rewrite to retarget `printf`
+ * - [ ] Add DMA support
+ * - [ ] Integrate my libcircular library
+ */
+
 #include "../uart.h"
 #include <stm32f4xx.h>
 #include <stdarg.h>

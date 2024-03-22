@@ -8,6 +8,17 @@ add more abstractions and make the development and build process easier.
 
 There is also a Bosch BNO055 Driver inside.
 
+### Planned Features
+- [ ] ADC
+- [ ] WatchDog timer
+- [ ] Timers
+- [ ] PWM
+- [ ] More RCC configuration
+- [ ] Clock configuration interface
+- [ ] Retarget for `printf` using USART
+- [ ] Integrate my [ringbuffer library](https://github.com/d-mironov/libcircular) into USART
+- [ ] All peripherals DMA Support
+
 ### Examples
 
 GPIO PC13 high and low
@@ -81,4 +92,4 @@ For more examples just look into the `main.c` for now.
 Hit me up if you want to talk about the project or contribute.
 
 E-Mail: [moonxraccoon@proton.me](mailto:moonxraccoon@proton.me)  
-Discord: moonraccoon#4788
+Discord: moon#4788

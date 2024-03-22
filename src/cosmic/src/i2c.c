@@ -192,13 +192,15 @@ error i2c_read(i2c port, u8 slave, u8 memaddr, u8* data) {
     // send memory address
     (port.i2c)->DR = memaddr;
     // check TXE flag
-    while (!((port.i2c)->SR1 & I2C_SR1_TXE))
-        ;
+    while (!((port.i2c)->SR1 & I2C_SR1_TXE));
     //// GENERATE RESTART CONDITION
     if ((err = _i2c_send_start(port)) != OK) {
         return err;
     }
     //// put address in read mode
+    if ((err = _i2c_send_addr(port, slave, I2C_READ)) != OK) {
+        return err;
+    }
     if ((err = _i2c_send_addr(port, slave, I2C_READ)) != OK) {
         return err;
     }
@@ -208,8 +210,7 @@ error i2c_read(i2c port, u8 slave, u8 memaddr, u8* data) {
     // generate stop
     (port.i2c)->CR1 |= I2C_CR1_STOP;
     // check for RXNE flag
-    while (!((port.i2c)->SR1 & I2C_SR1_RXNE))
-        ;
+    while (!((port.i2c)->SR1 & I2C_SR1_RXNE));
     // GPIO_write(PA8, GPIO_ON);
     *data = (port.i2c)->DR;
     return OK;

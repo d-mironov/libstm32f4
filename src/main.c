@@ -207,6 +207,7 @@ int main(void) {
 
         vec_to_str(gyro, gyro_str);
 
+
         // ============================| Print sensor data
         // |==============================
         usart_printf(
